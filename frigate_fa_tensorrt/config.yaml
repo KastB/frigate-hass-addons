@@ -34,15 +34,12 @@ ports_description:
   1935/tcp: RTMP streams
 host_network: false
 tmpfs: true
-usb: true
-video: true
 full_access: true
-privileged: true
 environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
   plus_api_key: password?
-  env_vars: str
+  env_vars: str?
 services:
   - "mqtt:want"
 arch:
