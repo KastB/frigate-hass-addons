@@ -2,7 +2,7 @@ name: Frigate (Full Access TensorRT)
 version: 0.13.1
 panel_icon: "mdi:cctv"
 panel_title: Frigate
-slug: frigate-fa
+slug: frigate-fa-tensorrt
 description: NVR with realtime local object detection for IP cameras
 url: "https://github.com/blakeblackshear/frigate"
 startup: application
@@ -43,6 +43,7 @@ environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
   plus_api_key: password?
+  env_vars: str
 services:
   - "mqtt:want"
 arch:
