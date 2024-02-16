@@ -35,6 +35,20 @@ ports_description:
 host_network: false
 tmpfs: true
 full_access: true
+privileged:
+  - BPF
+  - DAC_READ_SEARCH
+  - IPC_LOCK
+  - NET_ADMIN
+  - NET_RAW
+  - PERFMON
+  - SYS_ADMIN
+  - SYS_MODULE
+  - SYS_NICE
+  - SYS_PTRACE
+  - SYS_RAWIO
+  - SYS_RESOURCE
+  - SYS_TIME
 environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
