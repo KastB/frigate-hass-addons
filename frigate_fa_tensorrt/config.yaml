@@ -42,7 +42,7 @@ environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
   plus_api_key: password?
-  env_vars: str
+  env_vars: str?
 services:
   - "mqtt:want"
 arch:
