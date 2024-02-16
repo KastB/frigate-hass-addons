@@ -37,8 +37,7 @@ tmpfs: true
 usb: true
 video: true
 full_access: true
-privileged:
-  - PERFMON
+privileged: true
 environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
