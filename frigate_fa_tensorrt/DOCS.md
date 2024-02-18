@@ -47,3 +47,18 @@ You can't configure single addons to run with the nvidia-runtime. An option, how
 }
 
 ```
+
+
+# NVIDIA Drivers
+You need the driver version 535 for trt at the moment
+=> on Debian you probably want to use the nvidia repos:
+```
+curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
+Add repo to sources
+
+echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+Update
+
+sudo apt update && sudo apt upgrade
+
+```
